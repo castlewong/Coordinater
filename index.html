@@ -26,14 +26,9 @@
 <body>
   <h1>Welcome to My Electron App</h1>
   <p>This is a simple Electron app example.</p>
-  <button id="myButton">Click Me</button>
+  <button id="chooseFileButton">Choose Excel File</button>
 
-  <!-- Add your JavaScript code here -->
-  <script>
-    const button = document.getElementById('myButton');
-    button.addEventListener('click', () => {
-      alert('Button clicked!');
-    });
-  </script>
+  <!-- Add the script tag to load the preload.js file -->
+  <script src="./preload.js"></script>
 </body>
 </html>
