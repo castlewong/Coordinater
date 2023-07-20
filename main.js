@@ -2,6 +2,7 @@ const { app, BrowserWindow, ipcMain, dialog } = require('electron');
 const path = require('path');
 const Excel = require('exceljs');
 const isDev = require('electron-is-dev');
+const { noDeprecation } = require('process');
 
 let mainWindow;
 
@@ -10,7 +11,8 @@ function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js') // Load the preload script
+      preload: path.join(__dirname, 'preload.js'), // Load the preload script
+      nodeIntegration: true // enable node integration
     }
   });
 
